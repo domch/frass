@@ -1,18 +1,6 @@
 
 
-var Ractive = require('ractive'),
-    ServiceRepository = require('./repository/ServiceRepository.js');
-
-/**
- * Services which we need
- */
-var i18n = ServiceRepository.get("i18n");
-
-
-/**
- * All instances of template engine has this function as default.
- */
-Ractive.defaults.data.i18n = i18n;
+var Ractive = require('ractive');
 
 
 
@@ -23,6 +11,10 @@ Ractive.defaults.data.i18n = i18n;
  */
 var module =
 {
+    init: function(){
+        ServiceRepository = require('./repository/ServiceRepository.js');
+        Ractive.defaults.data.i18n = ServiceRepository.get("i18n");;
+    },
 
     /**
      * @param pContainer
