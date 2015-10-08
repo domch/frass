@@ -14,7 +14,7 @@ var Utils = require('./Utils.js'),
 var module =
 {
 
-    init: function(pInitCall, pConfig, pLang)
+    init: function(pInitCall, pConfig)
     {
         ControllerRepository.init({
             Config: pConfig,

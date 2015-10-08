@@ -31097,7 +31097,7 @@ var Utils = require('./Utils.js'),
 var module =
 {
 
-    init: function(pInitCall, pConfig, pLang)
+    init: function(pInitCall, pConfig)
     {
         ControllerRepository.init({
             Config: pConfig,
@@ -31283,8 +31283,8 @@ var module =
         pCallback(ractive);
     },
 
-    loadIntFile: function(){
-        i18n.init();
+    loadIntFile: function(pIntFile){
+        i18n.appendFile(pIntFile);
     }
 };
 

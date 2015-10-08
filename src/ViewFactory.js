@@ -58,8 +58,8 @@ var module =
         pCallback(ractive);
     },
 
-    loadIntFile: function(){
-        i18n.init();
+    loadIntFile: function(pIntFile){
+        i18n.appendFile(pIntFile);
     }
 };
 

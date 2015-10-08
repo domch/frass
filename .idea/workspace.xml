@@ -72,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.02526003">
+            <state vertical-scroll-proportion="-0.65384614">
               <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
               <folding />
             </state>
@@ -88,24 +88,8 @@
             <state vertical-scroll-proportion="-5805.793">
               <caret line="9915" column="26" selection-start-line="9915" selection-start-column="26" selection-end-line="9915" selection-end-column="26" />
               <folding>
-                <marker date="1444314193301" expanded="true" signature="539:855518" placeholder="{...}" />
-                <marker date="1444314193301" expanded="true" signature="1021:855506" placeholder="{...}" />
-                <marker date="1444314193301" expanded="true" signature="846021:846486" placeholder="[...]" />
-                <marker date="1444314193301" expanded="true" signature="846054:846486" placeholder="{...}" />
-                <marker date="1444314193301" expanded="true" signature="846446:846486" placeholder="{...}" />
-                <marker date="1444314193301" expanded="true" signature="854076:854658" placeholder="{&quot;langFile&quot;: null...}" />
-                <marker date="1444314193301" expanded="true" signature="854076:854731" placeholder="[...]" />
+                <marker date="1444314487015" expanded="true" signature="851055:851063" placeholder="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -114,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/src/ApplicationFactory.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
               <folding>
                 <element signature="e#0#44#0" expanded="false" />
               </folding>
@@ -122,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewFactory.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ViewFactory.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ViewFactory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.8297568">
+              <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -162,10 +146,10 @@
         <option value="$PROJECT_DIR$/src/repository/ControllerRepository.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/src/ApplicationFactory.js" />
-        <option value="$PROJECT_DIR$/src/ViewFactory.js" />
         <option value="$PROJECT_DIR$/src/service/i18n.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/ApplicationFactory.js" />
+        <option value="$PROJECT_DIR$/src/ViewFactory.js" />
       </list>
     </option>
   </component>
@@ -564,12 +548,12 @@
       <created>1444221101069</created>
       <option name="number" value="Default" />
       <updated>1444221101069</updated>
-      <workItem from="1444221102247" duration="9626000" />
+      <workItem from="1444221102247" duration="9912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9626000" />
+    <option name="totallyTimeSpent" value="9912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1216" extended-state="6" />
@@ -582,7 +566,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3299539" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3299539" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299539" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23987207" sideWeight="0.3397524" order="-1" side_tool="true" content_ui="tabs" />
@@ -690,6 +674,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/repository/ControllerRepository.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -700,16 +700,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.048640914">
           <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -719,13 +711,7 @@
         <state vertical-scroll-proportion="-5805.793">
           <caret line="9915" column="26" selection-start-line="9915" selection-start-column="26" selection-end-line="9915" selection-end-column="26" />
           <folding>
-            <marker date="1444314193301" expanded="true" signature="539:855518" placeholder="{...}" />
-            <marker date="1444314193301" expanded="true" signature="1021:855506" placeholder="{...}" />
-            <marker date="1444314193301" expanded="true" signature="846021:846486" placeholder="[...]" />
-            <marker date="1444314193301" expanded="true" signature="846054:846486" placeholder="{...}" />
-            <marker date="1444314193301" expanded="true" signature="846446:846486" placeholder="{...}" />
-            <marker date="1444314193301" expanded="true" signature="854076:854658" placeholder="{&quot;langFile&quot;: null...}" />
-            <marker date="1444314193301" expanded="true" signature="854076:854731" placeholder="[...]" />
+            <marker date="1444314487015" expanded="true" signature="851055:851063" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -733,18 +719,10 @@
     <entry file="file://$PROJECT_DIR$/src/ApplicationFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ViewFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,10 +734,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/ViewFactory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02526003">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.8297568">
+          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
           <folding />
         </state>
       </provider>
