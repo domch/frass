@@ -10,12 +10,13 @@ var BrowserifyUmdify = require('browserify-umdify');
 
 gulp.task('build', function() {
         browserify({
-            entries: './src/_index.js',
+            entries: 'src/_index.js',
+            standalone: 'frass',
             debug: false
         })
         //.transform(babelify)
         .bundle()
-        .pipe(new BrowserifyUmdify())
+        //.pipe(new BrowserifyUmdify())
         .pipe(source('frass.js'))
         .pipe(gulp.dest('./dist'));
 });
