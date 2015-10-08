@@ -1,42 +1,37 @@
-define(
-[
-    'config',
-    'common/EventFactory',
-    'common/ViewFactory',
-    'common/RouteResolver',
-    'common/Utils',
-    'common/repository/ControllerRepository',
-    'common/repository/ServiceRepository'
-],
-function (Config, EventFactory, ViewFactory, RouteResolver, Utils, ControllerRepository, ServiceRepository)
+/**
+ * Created by axmdo01 on 08.10.2015.
+ */
+
+var Utils = require('./Utils.js'),
+
+    EventFactory = require('./EventFactory.js'),
+    ViewFactory = require('./ViewFactory.js'),
+    RouteResolver = require('./RouteResolver.js'),
+    ControllerRepository = require('./repository/ControllerRepository.js'),
+    ServiceRepository = require('./repository/ServiceRepository.js');
+
+
+var module =
 {
-    "use strict";
 
-
-    /**
-     * @module common/ApplicationFactory
-     */
-    var module =
+    init: function(pInitCall, pConfig)
     {
+        var rest = ServiceRepository.get("rest");
 
-    	init: function(pInitCall)
-        {
-            var rest = ServiceRepository.get("rest");
+        ControllerRepository.init({
+            Config: pConfig,
+            Utils: Utils,
+            EventFactory: EventFactory,
+            ViewFactory: ViewFactory,
+            RouteResolver: RouteResolver,
+            ControllerRepository: ControllerRepository,
+            ServiceRepository: ServiceRepository
+        });
 
-            ControllerRepository.init({
-                Config: null,
-                EventFactory: EventFactory,
-                ViewFactory: ViewFactory,
-                RouteResolver: RouteResolver,
-                Utils: Utils,
-                ControllerRepository: ControllerRepository,
-                ServiceRepository: ServiceRepository
-            });
-
-            RouteResolver.route("!");
-            EventFactory.broadcast(pInitCall);
-        }
+        RouteResolver.route("!");
+        EventFactory.broadcast(pInitCall);
     }
+};
 
-    return module;
-}); 
+
+module.exports = module;

@@ -1,25 +1,15 @@
-/**
- * A service
- *
- */
-define(
-[
-],
-function ()
+
+
+
+var module =
 {
-    "use strict";
-
-
-    var module =
-    {
-        save: function(pKey, pData){
-            window.localStorage[pKey] = JSON.stringify(pData);
-        },
-        load: function(pKey){
-            return JSON.parse(window.localStorage[pKey]);
-        }
+    save: function(pKey, pData){
+        localStorage[pKey] = JSON.stringify(pData);
+    },
+    load: function(pKey){
+        return JSON.parse(localStorage[pKey]);
     }
+};
 
 
-    return module;
-});
+module.exports = module;

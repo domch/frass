@@ -1,74 +1,59 @@
 /**
-* This module keeps the list of controllers to enable synchronous access.
-* It should be created automatically by task runner.
-*/
-define(
-[
-],
-function()
+ * Private Functions
+ * @type {{controllers: {}, load: Function, register: Function}}
+ */
+function getControlllerName(pName){
+    return './domain/{{name}}/ctrl'.replace('{{name}}', pName);
+}
+
+
+/**
+ * Model
+ * @type {{controllers: {}, load: Function, register: Function}}
+ */
+var module =
 {
-    "use strict";
+    context: null,
 
+    controllers: {},
 
-    /**
-     * Private Functions
-     * @type {{controllers: {}, load: Function, register: Function}}
-     */
-    function getControlllerName(pName){
-        return './domain/{{name}}/ctrl'.replace('{{name}}', pName);
-    }
+    init: function(pContext){
+        this.context = pContext;
+    },
 
-
-
-
-
-
-    /**
-     * Model
-     * @type {{controllers: {}, load: Function, register: Function}}
-     */
-    var module =  
+    get: function(pName, pCallback)
     {
-        context: null,
-
-    	controllers: {},
-
-        init: function(pContext){
-            this.context = pContext;
-        },
-
-        get: function(pName, pCallback)
+        if( !this.controllers[pName] )
         {
-            if( !this.controllers[pName] )
+            require([getControlllerName(pName)], function (pCtrl)
             {
-                require([getControlllerName(pName)], function (pCtrl)
-                {
-                    module.controllers[pName] = pCtrl;
-                    module.setContext(pCtrl);
-                    module.initContext(pCtrl);
+                module.controllers[pName] = pCtrl;
+                module.setContext(pCtrl);
+                module.initContext(pCtrl);
 
-                    if( pCallback )
-                        return pCallback();
-                });
-            }else
-                return pCallback();
-        },
+                if( pCallback )
+                    return pCallback();
+            });
+        }else
+            return pCallback();
+    },
 
-        register: function(pName, pController)
-        {
-            this.controllers[pName] = pController;
-        },
+    register: function(pName, pController)
+    {
+        this.controllers[pName] = pController;
+    },
 
-        setContext: function(pCtrl){
-            pCtrl.$ = this.context;
-            pCtrl.view.$ = this.context;
-        },
+    setContext: function(pCtrl){
+        pCtrl.$ = this.context;
+        pCtrl.view.$ = this.context;
+    },
 
-        initContext: function(pCtrl){
-            pCtrl.context();
-        }
-    };
+    initContext: function(pCtrl){
+        pCtrl.context();
+    }
+};
 
 
-    return module;
-});
+
+
+module.exports = module;
