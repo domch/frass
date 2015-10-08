@@ -5,6 +5,8 @@ var uglify = require('gulp-uglify');
 var babelify = require('babelify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var BrowserifyUmdify = require('browserify-umdify');
+
 
 gulp.task('build', function() {
         browserify({
@@ -13,6 +15,7 @@ gulp.task('build', function() {
         })
         //.transform(babelify)
         .bundle()
+        .pipe(new BrowserifyUmdify())
         .pipe(source('frass.js'))
         .pipe(gulp.dest('./dist'));
 });

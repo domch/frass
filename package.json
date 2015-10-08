@@ -1,6 +1,7 @@
 {
-  "version": "0.7.0",
-  "name": "Frass",
+  "version": "0.7.1",
+  "name": "frass",
+  "repository": "https://github.com/domch/frass",
   "description": "A Frameworkless Web-App Skeleton",
   "license": "MIT",
   "dependencies": {
@@ -11,7 +12,6 @@
     "jquery": "^2.1.4",
     "moment": "^2.10.6",
     "numeral": "^1.5.3"
-
   },
   "devDependencies": {
     "babelify": "^6.1.0",
@@ -28,6 +28,7 @@
     "request": "~2.53.0",
     "shelljs": "^0.2.6",
     "time-grunt": "~1.1.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "browserify-umdify": "1.0.3"
   }
 }
