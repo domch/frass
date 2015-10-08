@@ -31087,11 +31087,12 @@ return jQuery;
 
 var Utils = require('./Utils.js'),
 
-    EventFactory = require('./EventFactory.js'),
-    ViewFactory = require('./ViewFactory.js'),
-    RouteResolver = require('./RouteResolver.js'),
     ControllerRepository = require('./repository/ControllerRepository.js'),
-    ServiceRepository = require('./repository/ServiceRepository.js');
+    ServiceRepository = require('./repository/ServiceRepository.js'),
+
+    EventFactory = require('./EventFactory.js'),
+    RouteResolver = require('./RouteResolver.js'),
+    ViewFactory = require('./ViewFactory.js');
 
 
 var module =
