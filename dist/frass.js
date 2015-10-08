@@ -31117,7 +31117,7 @@ var module =
 
 
 module.exports = module;
-},{"./EventFactory.js":9,"./RouteResolver.js":10,"./Utils.js":11,"./ViewFactory.js":12,"./repository/ControllerRepository.js":13,"./repository/ServiceRepository.js":14}],9:[function(require,module,exports){
+},{"./EventFactory.js":9,"./RouteResolver.js":10,"./Utils.js":11,"./ViewFactory.js":12,"./repository/ControllerRepository.js":14,"./repository/ServiceRepository.js":15}],9:[function(require,module,exports){
 
 var radio = require('radio'),
     ControllerRepository = require('./repository/ControllerRepository.js');
@@ -31158,7 +31158,7 @@ var module =
 
 module.exports = module;
 
-},{"./repository/ControllerRepository.js":13,"radio":6}],10:[function(require,module,exports){
+},{"./repository/ControllerRepository.js":14,"radio":6}],10:[function(require,module,exports){
 
 
 var crossroads = require('crossroads');
@@ -31282,7 +31282,12 @@ var module =
 };
 
 module.exports = module;
-},{"./repository/ServiceRepository.js":14,"ractive":5}],13:[function(require,module,exports){
+},{"./repository/ServiceRepository.js":15,"ractive":5}],13:[function(require,module,exports){
+/**
+ * Created by axmdo01 on 08.10.2015.
+ */
+module.exports = require('./ApplicationFactory.js');
+},{"./ApplicationFactory.js":8}],14:[function(require,module,exports){
 /**
  * Private Functions
  * @type {{controllers: {}, load: Function, register: Function}}
@@ -31342,7 +31347,7 @@ var module =
 
 
 module.exports = module;
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 
 var module =
 {
@@ -31368,7 +31373,7 @@ module.register("storage", require('../service/storage.js'));
 
 
 module.exports = module;
-},{"../service/dom.js":15,"../service/i18n.js":16,"../service/rest.js":17,"../service/storage.js":18}],15:[function(require,module,exports){
+},{"../service/dom.js":16,"../service/i18n.js":17,"../service/rest.js":18,"../service/storage.js":19}],16:[function(require,module,exports){
 var $ = require('jquery');
 
 var module =
@@ -31389,7 +31394,7 @@ var module =
 
 
 module.exports = module;
-},{"jquery":2}],16:[function(require,module,exports){
+},{"jquery":2}],17:[function(require,module,exports){
 
 var Utils = require('../Utils.js'),
     moment = require('moment'),
@@ -31438,7 +31443,7 @@ var module =
 
 
 module.exports = module;
-},{"../Utils.js":11,"moment":3,"numeral":4}],17:[function(require,module,exports){
+},{"../Utils.js":11,"moment":3,"numeral":4}],18:[function(require,module,exports){
 var $ = require('jquery');
 
 
@@ -31461,7 +31466,7 @@ var module =
 
 
 module.exports = module;
-},{"jquery":2}],18:[function(require,module,exports){
+},{"jquery":2}],19:[function(require,module,exports){
 
 
 
@@ -31477,6 +31482,6 @@ var module =
 
 
 module.exports = module;
-},{}]},{},[8]);
+},{}]},{},[13]);
 
 });

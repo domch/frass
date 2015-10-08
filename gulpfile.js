@@ -10,7 +10,7 @@ var BrowserifyUmdify = require('browserify-umdify');
 
 gulp.task('build', function() {
         browserify({
-            entries: './src/ApplicationFactory.js',
+            entries: './src/_index.js',
             debug: false
         })
         //.transform(babelify)
