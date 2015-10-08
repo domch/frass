@@ -4,17 +4,26 @@ var Utils = require('../Utils.js'),
     numeral = require('numeral');
 
 
-//moment.locale(Utils.getLocale());
-//numeral.language(Utils.getLocale());
-var langFile = LangFile[Utils.getLocale()];
+
+
+
 
 
 var module =
 {
+    files: [],
     langFile: null,
 
-    init: function(pLangFile){
-        module.langFile = pLangFile[Utils.getLocale()];
+    appendFile: function(pLangFile)
+    {
+        this.files.push(pLangFile);
+        module.langFile = this.files.reduce(function(pCumulator, pCurrent)
+        {
+            for(var key in pCurrent[Utils.getLocale()])
+                if(pCurrent[Utils.getLocale()].hasOwnProperty(key))
+                    pCumulator[key] = pCurrent[Utils.getLocale()][key];
+            return pCumulator;
+        }, {});
     },
     formatDate: function(pDate, pOptions){
         if(moment(pDate).isValid()){

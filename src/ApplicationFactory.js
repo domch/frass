@@ -14,10 +14,8 @@ var Utils = require('./Utils.js'),
 var module =
 {
 
-    init: function(pInitCall, pConfig)
+    init: function(pInitCall, pConfig, pLang)
     {
-        var rest = ServiceRepository.get("rest");
-
         ControllerRepository.init({
             Config: pConfig,
             Utils: Utils,

@@ -56,6 +56,10 @@ var module =
             });
 
         pCallback(ractive);
+    },
+
+    loadIntFile: function(){
+        i18n.init();
     }
 };
 
