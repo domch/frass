@@ -1,25 +1,34 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var watch = require('gulp-watch');
-var uglify = require('gulp-uglify');
-var babelify = require('babelify');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-var BrowserifyUmdify = require('browserify-umdify');
+var gulp = require('gulp'),
+    rjs = require('gulp-requirejs'),
+    minify = require('gulp-minify');
 
 
 gulp.task('build', function() {
-        browserify({
-            entries: 'src/_index.js',
-            standalone: 'frass',
-            debug: false
-        })
-        //.transform(babelify)
-        .bundle()
-        //.pipe(new BrowserifyUmdify())
-        .pipe(source('frass.js'))
-        .pipe(gulp.dest('./dist'));
+    rjs({
+        name: 'ApplicationFactory',
+        baseUrl: './src',
+        out: 'frass.js',
+        paths:
+        {
+            modernizr: '_libs/modernizr/modernizr',
+            jquery: '_libs/jquery/dist/jquery.min',
+            text: '_libs/requirejs-text/text',
+            signals: '_libs/signals/dist/signals.min',
+            crossroads: '_libs/crossroads.js/dist/crossroads.min',
+            numeral: '_libs/numeraljs/min/numeral.min',
+            moment: '_libs/moment/min/moment.min',
+            radio:'_libs/Radio/radio.min',
+            ractive: '_libs/ractive/ractive.min'
+        },
+
+        shim: {}
+    })
+        .pipe(minify({
+            exclude: ['tasks'],
+            ignoreFiles: ['.combo.js', '-min.js']
+        }))
+        .pipe(gulp.dest('./dist/'));
 });
 
 
-
+gulp.task('default', ['build']);

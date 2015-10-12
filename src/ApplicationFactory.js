@@ -1,36 +1,41 @@
-/**
- * Created by axmdo01 on 08.10.2015.
- */
-
-var Utils = require('./Utils.js'),
-
-    ControllerRepository = require('./repository/ControllerRepository.js'),
-    ServiceRepository = require('./repository/ServiceRepository.js'),
-
-    EventFactory = require('./EventFactory.js'),
-    RouteResolver = require('./RouteResolver.js'),
-    ViewFactory = require('./ViewFactory.js');
-
-
-var module =
+define(
+[
+    'EventFactory',
+    'ViewFactory',
+    'RouteResolver',
+    'Utils',
+    'repository/ControllerRepository',
+    'repository/ServiceRepository'
+],
+function (EventFactory, ViewFactory, RouteResolver, Utils, ControllerRepository, ServiceRepository)
 {
+    "use strict";
 
-    init: function(pInitCall, pConfig)
+
+    /**
+     * @module common/ApplicationFactory
+     */
+    var module =
     {
-        ControllerRepository.init({
-            Config: pConfig,
-            Utils: Utils,
-            EventFactory: EventFactory,
-            ViewFactory: ViewFactory,
-            RouteResolver: RouteResolver,
-            ControllerRepository: ControllerRepository,
-            ServiceRepository: ServiceRepository
-        });
 
-        RouteResolver.route("!");
-        EventFactory.broadcast(pInitCall);
+    	init: function(pInitCall, pConfig)
+        {
+            var rest = ServiceRepository.get("rest");
+
+            ControllerRepository.init({
+                Config: pConfig,
+                EventFactory: EventFactory,
+                ViewFactory: ViewFactory,
+                RouteResolver: RouteResolver,
+                Utils: Utils,
+                ControllerRepository: ControllerRepository,
+                ServiceRepository: ServiceRepository
+            });
+
+            RouteResolver.route("!");
+            EventFactory.broadcast(pInitCall);
+        }
     }
-};
 
-
-module.exports = module;
+    return module;
+}); 

@@ -1,22 +1,32 @@
-var $ = require('jquery');
-
-
-var module =
+/**
+ * A service
+ *
+ */
+define(
+[
+    '_libs/jquery/dist/jquery.min'
+],
+function ()
 {
-    call: function (pAction, pMethod, pHeaders, pData) {
-        return $.ajax({
-            url: pAction,
-            type: pMethod,
-            cache: false,
-            dataType: 'json',
-            timeout: 60000,
-            crossDomain: true,
-            headers: pHeaders,
-            //contentType: "application/json;charset=UTF-8",
-            data: pData
-        });
+    "use strict";
+
+
+    var module =
+    {
+        call: function (pAction, pMethod, pHeaders, pData) {
+            return $.ajax({
+                url: pAction,
+                type: pMethod,
+                cache: false,
+                dataType: 'json',
+                timeout: 60000,
+                crossDomain: true,
+                headers: pHeaders,
+                data: pData
+            });
+        }
     }
-};
 
 
-module.exports = module;
+    return module;
+});

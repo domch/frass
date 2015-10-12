@@ -1,25 +1,41 @@
-
-var module =
+/**
+* This module is the responsible for creating services
+*
+*/
+define(
+[
+    '../service/dom',
+    '../service/i18n',
+    '../service/rest',
+    '../service/storage'
+],
+function (SrvDom, SrvI18N, SrvRest, SrvStorage)
 {
-    services: {},
+    "use strict";
 
-    get: function(pName)
+
+    var module =
     {
-        return this.services[pName];
-    },
+        services: {},
 
-    register: function(pName, pService)
-    {
-        this.services[pName]= pService;
-    }
-};
+        get: function(pName)
+        {
+            return this.services[pName];
+        },
 
-
-
-module.register("dom", require('../service/dom.js'));
-module.register("i18n", require('../service/i18n.js'));
-module.register("rest", require('../service/rest.js'));
-module.register("storage", require('../service/storage.js'));
+        register: function(pName, pService)
+        {
+            this.services[pName]= pService;
+        }
+    };
 
 
-module.exports = module;
+
+    module.register("dom", SrvDom);
+    module.register("i18n", SrvI18N);
+    module.register("rest", SrvRest);
+    module.register("storage", SrvStorage);
+
+
+    return module;
+}); 
