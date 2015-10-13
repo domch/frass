@@ -1,14 +1,3 @@
-/**
-* This module keeps the list of controllers to enable synchronous access.
-* It should be created automatically by task runner.
-*/
-define(
-[
-],
-function()
-{
-    "use strict";
-
 
     /**
      * Private Functions
@@ -41,7 +30,7 @@ function()
         {
             if( !this.controllers[pName] )
             {
-                require([getControlllerName(pName)], function (pCtrl)
+                requirejs([getControlllerName(pName)], function (pCtrl)
                 {
                     if( !module.controllers[pName] ) {
                         module.controllers[pName] = pCtrl;
@@ -60,7 +49,7 @@ function()
         {
             if( !this.controllers[pName] )
             {
-                require([pCtrlResource], function (pCtrl)
+                requirejs([pCtrlResource], function (pCtrl)
                 {
                     module.controllers[pName] = pCtrl;
                     module.setContext(pCtrl);
@@ -79,8 +68,7 @@ function()
         },
 
         setContext: function(pCtrl){
-            pCtrl.$ = this.context;
-            pCtrl.view.$ = this.context;
+            pCtrl.$ = pCtrl.view.$ = window.frass;
         },
 
         initContext: function(pCtrl){
@@ -89,5 +77,6 @@ function()
     };
 
 
-    return module;
-});
+
+
+    export default module;

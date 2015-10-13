@@ -1,35 +1,28 @@
-/**
- * A service
- *
- */
-define(
-[
-    '_libs/jquery/dist/jquery.min'
-],
-function (SelectorEngine)
-{
-    "use strict";
+
+    import $ from '../_libs/jquery/dist/jquery.min';
 
 
     var module =
     {
         selector: function (selector) {
-            return SelectorEngine(selector);
+            return $(selector);
         },
         /*attachEvent: function(pContainer, pEvent, pElement, pCallback){
-            SelectorEngine(pContainer).on(pEvent, pElement, pCallback);
+            $(pContainer).on(pEvent, pElement, pCallback);
         },*/
         attachEvent: function(pContainer, pEvent, pCallback){
-            SelectorEngine(pContainer).on(pEvent, pCallback);
+            $(pContainer).on(pEvent, pCallback);
         },
         addModifier: function(pContainer, pClass){
-            SelectorEngine(pContainer).addClass(pClass);
+            $(pContainer).addClass(pClass);
         },
         removeModifier: function(pContainer, pClass){
-            SelectorEngine(pContainer).removeClass(pClass);
+            $(pContainer).removeClass(pClass);
         }
-    }
+    };
 
 
-    return module;
-});
+
+
+
+    export default module;

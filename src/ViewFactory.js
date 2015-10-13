@@ -1,14 +1,8 @@
-/**
- *
- */
-define(
-[
-    'ractive',
-    'repository/ServiceRepository'
-],
-function (Ractive, ServiceRepository)
-{
-    "use strict";
+
+    import Ractive from 'ractive';
+    import ServiceRepository from './repository/ServiceRepository';
+
+
 
     /**
      * Services which we need
@@ -40,7 +34,7 @@ function (Ractive, ServiceRepository)
 
         create: function(pContainer, pTemplateSource, pData, pCallback)
         {
-            require(['_libs/requirejs-text/text!domain/' + pTemplateSource],
+            requirejs(['_libs/requirejs-text/text!domain/' + pTemplateSource],
                 function (pTemplate) {
                     module.createByText(pContainer, pTemplate, pData, pCallback);
                 }
@@ -68,5 +62,4 @@ function (Ractive, ServiceRepository)
     };
 
 
-    return module;
-}); 
+    export default module;

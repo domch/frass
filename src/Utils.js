@@ -1,9 +1,4 @@
-define(
-[
-],
-function ()
-{
-    "use strict";
+
 
     var module = {
         guid: function () {
@@ -24,5 +19,6 @@ function ()
         }
     };
 
-    return module;
-});
+
+
+    export default module;

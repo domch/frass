@@ -1,11 +1,8 @@
-define(
-[
-    'radio',
-    'repository/ControllerRepository'
-],
-function (radio, ControllerRepository)
-{
-    "use strict";
+
+    import radio from './_libs/Radio/radio.min';
+    import ControllerRepository from './repository/ControllerRepository';
+
+
 
 
     /** Privates */
@@ -38,5 +35,5 @@ function (radio, ControllerRepository)
     };
 
 
-    return module;
-});
+
+    export default module;

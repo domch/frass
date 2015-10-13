@@ -1,13 +1,4 @@
-/**
- * A service
- *
- */
-define(
-[
-],
-function ()
-{
-    "use strict";
+
 
 
     var module =
@@ -18,8 +9,11 @@ function ()
         load: function(pKey){
             return JSON.parse(window.localStorage[pKey]);
         }
-    }
+    };
 
 
-    return module;
-});
+
+
+
+
+    export default module;

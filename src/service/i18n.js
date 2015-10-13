@@ -1,16 +1,7 @@
-/**
- * A service
- *
- */
-define(
-[
-    '../Utils',
-    '_libs/moment/min/moment-with-locales.min',
-    '_libs/numeraljs/min/numeral.min'
-],
-function (Utils, moment, numeral)
-{
-    "use strict";
+
+    import Utils from '../Utils'
+    import moment from  '../_libs/moment/min/moment-with-locales.min';
+    //import numeral from '../_libs/numeraljs/min/numeral.min';
 
 
     var module =
@@ -35,6 +26,7 @@ function (Utils, moment, numeral)
                 return moment(pDate).format("DD-MM-YYYY");
             }else return pDate;
         },
+        /*
         formatNumber: function(pNumber, pOptions){
             return numeral(pNumber).format('0,0');
         },
@@ -44,14 +36,16 @@ function (Utils, moment, numeral)
         formatPercentage: function(pPercentage, pOptions){
             return numeral(pPercentage).format('0,0%');
         },
+        */
         get: function(pKey, pOptions){
             return langFile[pKey] ? langFile[pKey] : pKey;
         },
         getLocale: function(){
             return Utils.getLocale();
         }
-    }
+    };
 
 
-    return module;
-});
+
+
+    export default module;

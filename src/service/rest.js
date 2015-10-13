@@ -1,15 +1,4 @@
-/**
- * A service
- *
- */
-define(
-[
-    '_libs/jquery/dist/jquery.min'
-],
-function ()
-{
-    "use strict";
-
+    import $ from '../_libs/jquery/dist/jquery.min';
 
     var module =
     {
@@ -25,8 +14,9 @@ function ()
                 data: pData
             });
         }
-    }
+    };
 
 
-    return module;
-});
+
+
+    export default module;

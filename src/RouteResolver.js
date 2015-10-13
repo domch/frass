@@ -1,15 +1,6 @@
-define(
-[
-    'crossroads'
-],
-function (crossroads) {
-    "use strict";
 
+    import crossroads from './_libs/crossroads.js/dist/crossroads.min';
 
-
-    crossroads.addRoute('!', function () {
-        location.hash = '';
-    });
 
 
     /**
@@ -28,6 +19,9 @@ function (crossroads) {
         init: function()
         {
             crossroads.routed.add(console.log, console);
+            crossroads.addRoute('!', function () {
+                location.hash = '';
+            });
         },
 
         route: function(pRouteName){
@@ -42,5 +36,5 @@ function (crossroads) {
 
     module.init();
 
-    return module;
-});
+
+    export default module;
