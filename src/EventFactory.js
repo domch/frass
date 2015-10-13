@@ -1,5 +1,5 @@
 
-    import radio from './_libs/Radio/radio.min';
+    import radio from 'radio';
     import ControllerRepository from './repository/ControllerRepository';
 
 

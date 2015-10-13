@@ -1,5 +1,5 @@
 
-    import $ from '../_libs/jquery/dist/jquery.min';
+    import $ from 'jquery';
 
 
     var module =

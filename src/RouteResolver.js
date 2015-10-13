@@ -1,5 +1,5 @@
 
-    import crossroads from './_libs/crossroads.js/dist/crossroads.min';
+    import crossroads from 'crossroads';
 
 
 

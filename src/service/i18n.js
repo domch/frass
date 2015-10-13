@@ -1,6 +1,6 @@
 
     import Utils from '../Utils'
-    import moment from  '../_libs/moment/min/moment-with-locales.min';
+    import moment from  'moment';
     //import numeral from '../_libs/numeraljs/min/numeral.min';
 
 
