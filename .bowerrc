@@ -1,6 +1,0 @@
-{
-    "directory":"src/_libs",
-    "proxy":"http://igw-axzh.abxsec.com:8080",
-    "https-proxy":"http://igw-axzh.abxsec.com:8080",
-    "strict-ssl":false
-}
