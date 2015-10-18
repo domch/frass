@@ -12,7 +12,7 @@
         appendFile: function(pLangFile)
         {
             this.files.push(pLangFile);
-            module.langFile = this.files.reduce(function(pCumulator, pCurrent)
+            this.langFile = this.files.reduce(function(pCumulator, pCurrent)
             {
                 for(var key in pCurrent[Utils.getLocale()])
                     if(pCurrent[Utils.getLocale()].hasOwnProperty(key))
@@ -38,7 +38,7 @@
         },
         */
         get: function(pKey, pOptions){
-            return langFile[pKey] ? langFile[pKey] : pKey;
+            return this.langFile[pKey] ? this.langFile[pKey] : pKey;
         },
         getLocale: function(){
             return Utils.getLocale();
