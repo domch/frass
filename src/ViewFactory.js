@@ -58,6 +58,10 @@
                 });
 
             pCallback(ractive);
+        },
+
+        addLangFile: function(pLangFile){
+            i18n.appendFile(pLangFile);
         }
     };
 

@@ -30626,6 +30626,10 @@ var _module = {
         });
 
         pCallback(ractive);
+    },
+
+    addLangFile: function addLangFile(pLangFile) {
+        i18n.appendFile(pLangFile);
     }
 };
 
