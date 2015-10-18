@@ -15,8 +15,8 @@ gulp.task('build', function () {
         .bundle()
         .pipe(new BrowserifyUmdify())
         .pipe(source('frass.js'))
-        .pipe(buffer())
-        .pipe(uglify())
+        //.pipe(buffer())
+        //.pipe(uglify())
         .pipe(gulp.dest('dist'));
 });
 
