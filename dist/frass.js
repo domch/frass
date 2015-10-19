@@ -30577,6 +30577,10 @@ var _ractive = require('ractive');
 
 var _ractive2 = _interopRequireDefault(_ractive);
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _repositoryServiceRepository = require('./repository/ServiceRepository');
 
 var _repositoryServiceRepository2 = _interopRequireDefault(_repositoryServiceRepository);
@@ -30606,13 +30610,13 @@ var _module = {
      */
 
     create: function create(pContainer, pTemplateSource, pData, pCallback) {
-        requirejs(['_libs/requirejs-text/text!domain/' + pTemplateSource], function (pTemplate) {
+        _jquery2['default'].get("domain/" + pTemplateSource, function (pTemplate) {
             _module.createByText(pContainer, pTemplate, pData, pCallback);
         });
     },
 
     createByLoading: function createByLoading(pContainer, pTemplateSource, pData, pCallback) {
-        $.ajax({ url: pTemplateSource }).done(function (pTemplate) {
+        _jquery2['default'].ajax({ url: pTemplateSource }).done(function (pTemplate) {
             _module.createByText(pContainer, pTemplate, pData, pCallback);
         });
     },
@@ -30636,7 +30640,7 @@ var _module = {
 exports['default'] = _module;
 module.exports = exports['default'];
 
-},{"./repository/ServiceRepository":13,"ractive":4}],12:[function(require,module,exports){
+},{"./repository/ServiceRepository":13,"jquery":2,"ractive":4}],12:[function(require,module,exports){
 
 /**
  * Private Functions

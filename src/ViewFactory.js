@@ -1,5 +1,6 @@
 
     import Ractive from 'ractive';
+    import $ from 'jquery';
     import ServiceRepository from './repository/ServiceRepository';
 
 
@@ -34,11 +35,9 @@
 
         create: function(pContainer, pTemplateSource, pData, pCallback)
         {
-            requirejs(['_libs/requirejs-text/text!domain/' + pTemplateSource],
-                function (pTemplate) {
-                    module.createByText(pContainer, pTemplate, pData, pCallback);
-                }
-            );
+            $.get( "domain/" + pTemplateSource, function( pTemplate ) {
+                module.createByText(pContainer, pTemplate, pData, pCallback);
+            });
         },
 
         createByLoading: function(pContainer, pTemplateSource, pData, pCallback){
