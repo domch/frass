@@ -62,33 +62,14 @@ var module =
 
     createByUsingPartials: function(pContainer, pTemplateSource, pPartialSources, pData, pCallback){
 
-        function readPartialFiles(filenames) {
-            // N.B. passing readJSON as a function, not calling it with `()`
-            return Promise.all(filenames.map(readFile));
-        }
-
-        var partialSources = [];
-        Object.keys(pPartialSources).forEach(function(key) {
-            partialSources.push(pPartialSources[key]);
+        var partials = {};
+        pPartialSources.forEach(function(pPartial){
+            partials[pPartial.name] = pPartial.text;
         });
 
-        readPartialFiles(pPartialSources).done(function (pResult) {
-            // results is an array of the values stored in a.json and b.json
-
-            $.ajax({url: pTemplateSource}).done(function(pTemplate){
-                pResult.forEach(function(pPartial){
-                    Object.keys(pPartialSources).forEach(function(key) {
-                        pPartialSources[key] = pPartial;
-                    });
-                }).then(function () {
-                    module.createByTextUsingPartials(pContainer, pTemplate, pPartialSources, pData, pCallback);
-                });
-            });
-
-        }, function (err) {
-            // If any of the files fails to be read, err is the first error
+        $.ajax({url: pTemplateSource}).done(function(pTemplate){
+            module.createByTextUsingPartials(pContainer, pTemplate, partials, pData, pCallback);
         });
-
     },
 
 
