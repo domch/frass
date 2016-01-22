@@ -1,5 +1,5 @@
 {
-  "version": "0.8.5",
+  "version": "0.8.6",
   "name": "frass",
   "main": "dist/frass.js",
   "repository": "https://github.com/domch/frass",
