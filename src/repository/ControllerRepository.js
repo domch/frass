@@ -4,7 +4,7 @@
      * @type {{controllers: {}, load: Function, register: Function}}
      */
     function getControlllerName(pName){
-        return './domain/{{name}}/ctrl'.replace('{{name}}', pName);
+        return 'domain/{{name}}/ctrl'.replace('{{name}}', pName);
     }
 
 

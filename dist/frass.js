@@ -31708,7 +31708,7 @@ Object.defineProperty(exports, '__esModule', {
     value: true
 });
 function getControlllerName(pName) {
-    return './domain/{{name}}/ctrl'.replace('{{name}}', pName);
+    return 'domain/{{name}}/ctrl'.replace('{{name}}', pName);
 }
 
 /**
